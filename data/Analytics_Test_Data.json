@@ -1,0 +1,127 @@
+[
+  {
+    "invoice_number": "INV-2024-0001",
+    "vendor": {
+      "name": "Acme Corporation",
+      "email": "billing@acme.com",
+      "phone": "+1-555-0100",
+      "address": "123 Business St, New York, NY 10001",
+      "tax_id": "12-3456789"
+    },
+    "customer": {
+      "name": "Tech Solutions Inc",
+      "email": "ap@techsolutions.com",
+      "phone": "+1-555-1000",
+      "address": "456 Innovation Ave, San Francisco, CA 94105"
+    },
+    "issue_date": "2024-01-15",
+    "due_date": "2024-02-14",
+    "total_amount": 15750.00,
+    "paid_amount": 15750.00,
+    "status": "paid",
+    "category": "Software",
+    "currency": "USD",
+    "tax_amount": 1575.00,
+    "discount_amount": 0,
+    "notes": "Annual software license renewal",
+    "line_items": [
+      {
+        "description": "Enterprise Software License - Annual",
+        "quantity": 10,
+        "unit_price": 1500.00,
+        "amount": 15000.00,
+        "category": "Software"
+      }
+    ],
+    "payments": [
+      {
+        "amount": 15750.00,
+        "payment_date": "2024-02-10",
+        "payment_method": "bank_transfer",
+        "reference_no": "TXN-2024-0001"
+      }
+    ]
+  },
+  {
+    "invoice_number": "INV-2024-0002",
+    "vendor": {
+      "name": "Cloud Services Ltd",
+      "email": "invoices@cloudservices.com",
+      "phone": "+1-555-0200"
+    },
+    "customer": {
+      "name": "Tech Solutions Inc",
+      "email": "ap@techsolutions.com",
+      "phone": "+1-555-1000"
+    },
+    "issue_date": "2024-02-01",
+    "due_date": "2024-03-03",
+    "total_amount": 8900.00,
+    "paid_amount": 4450.00,
+    "status": "partial",
+    "category": "Cloud Services",
+    "currency": "USD",
+    "tax_amount": 890.00,
+    "line_items": [
+      {
+        "description": "AWS Cloud Hosting - Monthly",
+        "quantity": 1,
+        "unit_price": 5000.00,
+        "amount": 5000.00,
+        "category": "Cloud Services"
+      },
+      {
+        "description": "CDN Services",
+        "quantity": 1,
+        "unit_price": 3000.00,
+        "amount": 3000.00,
+        "category": "Cloud Services"
+      }
+    ],
+    "payments": [
+      {
+        "amount": 4450.00,
+        "payment_date": "2024-02-15",
+        "payment_method": "credit_card",
+        "reference_no": "CC-2024-0002"
+      }
+    ]
+  },
+  {
+    "invoice_number": "INV-2024-0003",
+    "vendor": {
+      "name": "Office Supplies Pro",
+      "email": "sales@officesupplies.com",
+      "phone": "+1-555-0300"
+    },
+    "customer": {
+      "name": "Digital Marketing Agency",
+      "email": "finance@digitalmarketing.com",
+      "phone": "+1-555-2000"
+    },
+    "issue_date": "2024-03-10",
+    "due_date": "2024-04-09",
+    "total_amount": 2340.00,
+    "paid_amount": 0,
+    "status": "pending",
+    "category": "Office Supplies",
+    "currency": "USD",
+    "tax_amount": 234.00,
+    "line_items": [
+      {
+        "description": "Office Furniture - Desk Chairs",
+        "quantity": 5,
+        "unit_price": 200.00,
+        "amount": 1000.00,
+        "category": "Office Supplies"
+      },
+      {
+        "description": "Standing Desks",
+        "quantity": 3,
+        "unit_price": 400.00,
+        "amount": 1200.00,
+        "category": "Office Supplies"
+      }
+    ]
+  }
+]
