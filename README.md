@@ -287,10 +287,8 @@ For questions or issues:
 
 ## 🎯 Live Demo
 
-- **Frontend**: [Coming Soon]
-- **API**: [Coming Soon]
-- **Demo Video**: [Coming Soon]
-
+- **Frontend**:https://web-dusky-psi.vercel.app/
+- **Backend**:https://api-tan-omega-35.vercel.app/
 ---
 
 Built with modern best practices and production-ready architecture. Ready to impress! 🚀
