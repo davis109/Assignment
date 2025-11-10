@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: invoice_analytics_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: invoice_analytics
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  vanna:
+    build:
+      context: ./services/vanna
+      dockerfile: Dockerfile
+    container_name: vanna_ai_service
+    environment:
+      DATABASE_URL: postgresql+psycopg://postgres:password@postgres:5432/invoice_analytics
+      GROQ_API_KEY: ${GROQ_API_KEY}
+      PORT: 8000
+      ALLOWED_ORIGINS: http://localhost:3000,http://localhost:3001
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./services/vanna:/app
+      - vanna_cache:/app/.vanna_cache
+
+volumes:
+  postgres_data:
+  vanna_cache:
